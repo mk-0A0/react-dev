@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { ColorMessage } from "./components/ColorMessage";
 import { CssModules } from "./components/CssModules";
 import { StyledJsx } from "./components/StyledJsx";
+import { StyledComponents } from "./components/StyledComponents";
 
 export const App = () => {
   const [num, setNum] = useState(0);
@@ -25,6 +26,7 @@ export const App = () => {
       <p>{num}</p>
       <CssModules />
       <StyledJsx />
+      <StyledComponents />
     </>
   );
 };
