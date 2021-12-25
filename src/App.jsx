@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { ColorMessage } from "./components/ColorMessage";
+import { CssModules } from "./components/CssModules";
 
 export const App = () => {
   const [num, setNum] = useState(0);
@@ -9,9 +10,9 @@ export const App = () => {
     setNum((prev) => prev + 1);
   };
 
-  useEffect(() => {
-    alert();
-  }, [num]);
+  // useEffect(() => {
+  //   alert();
+  // }, [num]);
 
   return (
     <>
@@ -21,6 +22,7 @@ export const App = () => {
       <ColorMessage color="pink">元気です</ColorMessage>
       <button onClick={onClickButton}>ボタン</button>
       <p>{num}</p>
+      <CssModules />
     </>
   );
 };
