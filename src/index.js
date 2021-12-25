@@ -1,12 +1,12 @@
-import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
+const App = () => {
+  return (
+    <>
+      <h1>こんにちは</h1>
+      <p>お元気ですか</p>
+    </>
+  );
+};
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  rootElement
-);
+ReactDOM.render(<App />, document.getElementById("root"));
