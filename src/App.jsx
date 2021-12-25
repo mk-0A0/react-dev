@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { ColorMessage } from "./components/ColorMessage";
 
 export const App = () => {
@@ -7,6 +8,10 @@ export const App = () => {
   const onClickButton = () => {
     setNum((prev) => prev + 1);
   };
+
+  useEffect(() => {
+    alert();
+  }, [num]);
 
   return (
     <>
