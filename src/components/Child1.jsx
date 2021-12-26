@@ -8,14 +8,17 @@ const style = {
   padding: "8px"
 };
 
-export const Child1 = memo(() => {
+export const Child1 = memo((props) => {
   console.log("Child1 レンダリング");
+
+  const { onClickReset } = props;
 
   return (
     <div style={style}>
       <p>Child1</p>
       <Child2 />
       <Child3 />
+      <button onClick={onClickReset}>リセット</button>
     </div>
   );
 });
