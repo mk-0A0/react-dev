@@ -1,34 +1,22 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { ColorMessage } from "./components/ColorMessage";
-import { CssModules } from "./components/CssModules";
-import { StyledJsx } from "./components/StyledJsx";
-import { StyledComponents } from "./components/StyledComponents";
-import { Emotion } from "./components/Emotion";
+import { useState, memo } from "react";
+import { Child1 } from "./components/Child1";
+import { Child4 } from "./components/Child4";
 
-export const App = () => {
+export const App = memo(() => {
+  console.log("App レンダリング");
+
   const [num, setNum] = useState(0);
 
   const onClickButton = () => {
     setNum((prev) => prev + 1);
   };
 
-  // useEffect(() => {
-  //   alert();
-  // }, [num]);
-
   return (
     <>
-      <h1 style={{ color: "red" }}>こんにちは</h1>
-      <ColorMessage />
-      <ColorMessage color="blue">お元気ですか</ColorMessage>
-      <ColorMessage color="pink">元気です</ColorMessage>
       <button onClick={onClickButton}>ボタン</button>
       <p>{num}</p>
-      <CssModules />
-      <StyledJsx />
-      <StyledComponents />
-      <Emotion />
+      <Child1 />
+      <Child4 />
     </>
   );
-};
+});
